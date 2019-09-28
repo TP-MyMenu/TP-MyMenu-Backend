@@ -40,6 +40,12 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+LOCAL_APPS = [
+    'MyMenu.apps.menu'
+]
+
+INSTALLED_APPS += LOCAL_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
