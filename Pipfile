@@ -12,6 +12,7 @@ markdown = "*"
 django-filter = "*"
 pillow = "*"
 django-extensions = "*"
+djoser = "*"
 
 [requires]
 python_version = "3.6"
