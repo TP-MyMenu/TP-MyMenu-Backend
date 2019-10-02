@@ -6,12 +6,13 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+django = "==2.2"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
 pillow = "*"
 django-extensions = "*"
+djoser = "*"
 
 [requires]
 python_version = "3.6"
