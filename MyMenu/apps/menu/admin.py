@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from MyMenu.apps.menu.models import Dish
+from MyMenu.apps.menu.models import Dish, DishCategory
 from MyMenu.apps.menu.service import DishService
 
 
@@ -34,3 +34,8 @@ class DishAdmin(admin.ModelAdmin):
             _("Mark as day dish"))
 
     custom_actions.short_description = _("dish actions")
+
+
+@admin.register(DishCategory)
+class DishCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description')
