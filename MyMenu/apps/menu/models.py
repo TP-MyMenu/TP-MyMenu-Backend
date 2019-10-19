@@ -24,3 +24,13 @@ class Dish(models.Model):
     class Meta:
         verbose_name = _('dish')
         verbose_name_plural = _('dishes')
+
+class Drink(models.Model):
+    name = models.CharField(_('name'), max_length=30)
+    description = models.CharField(_('description'), max_length=300)
+    image = models.ImageField(_('image'), upload_to='drinks/', null=True, blank=True, storage=OverwriteStorage())
+    price = models.FloatField(_('price'), default=0)
+
+    class Meta:
+        verbose_name = _('drink')
+        verbose_name_plural = _('drinks')
