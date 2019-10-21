@@ -6,7 +6,7 @@ from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
 from MyMenu.apps.menu.models import Dish
 from MyMenu.apps.menu.service import DishService
-
+from MyMenu.apps.menu.models import Drink
 
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
@@ -34,3 +34,7 @@ class DishAdmin(admin.ModelAdmin):
             _("Mark as day dish"))
 
     custom_actions.short_description = _("dish actions")
+
+@admin.register(Drink)
+class DrinkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'price')
