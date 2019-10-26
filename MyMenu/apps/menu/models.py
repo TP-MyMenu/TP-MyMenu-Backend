@@ -32,7 +32,8 @@ class Dish(models.Model):
     description = models.CharField(_('description'), max_length=300)
     image = models.ImageField(_('image'), upload_to='dishes/', null=True, blank=True, storage=OverwriteStorage())
     price = models.FloatField(_('price'), default=0)
-    category = models.ForeignKey(DishCategory, _("dish category"), related_name='dishes')
+    category = models.ForeignKey(DishCategory, verbose_name=_("dish category"), related_name='dishes',
+                                 on_delete=models.CASCADE)
     suitable_for_celiacs = models.BooleanField(_('suitable for celiacs'), default=False)
     suitable_for_vegetarians = models.BooleanField(_('suitable for vegetarians'), default=False)
 
