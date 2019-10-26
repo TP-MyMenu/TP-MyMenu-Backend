@@ -67,3 +67,11 @@ class DayDish(models.Model):
         verbose_name = _('day dish')
         verbose_name_plural = _('day dishes')
 
+
+class Suggestion(models.Model):
+    client_name = models.CharField(_('client name'), max_length=30, null=True, blank=True)
+    suggestion = models.CharField(_('suggestion'), max_length=300)
+
+    class Meta:
+        verbose_name = _('suggestion')
+        verbose_name_plural = _('suggestions')

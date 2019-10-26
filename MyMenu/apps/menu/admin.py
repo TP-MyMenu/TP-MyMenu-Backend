@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from MyMenu.apps.menu.models import Dish, DishCategory, DayDish
+from MyMenu.apps.menu.models import Dish, DishCategory, DayDish, Suggestion
 from MyMenu.apps.menu.service import DishService
 from MyMenu.apps.menu.models import Drink
 
@@ -14,6 +14,7 @@ class DishAdmin(admin.ModelAdmin):
     dish_service = DishService()
     list_display = ('name', 'description', 'price')
     list_filter = ('category', )
+
 
 @admin.register(Drink)
 class DrinkAdmin(admin.ModelAdmin):
@@ -51,3 +52,14 @@ class DayDishAdmin(admin.ModelAdmin):
 @admin.register(DishCategory)
 class DishCategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
+
+
+@admin.register(Suggestion)
+class SuggestionAdmin(admin.ModelAdmin):
+    list_display = ('client_name', 'suggestion')
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
