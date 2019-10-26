@@ -1,8 +1,8 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from MyMenu.apps.menu.models import Dish, DishCategory
-from MyMenu.apps.menu.serializers import DishSerializer, DishCategorySerializer
+from MyMenu.apps.menu.models import Dish, DishCategory, Drink
+from MyMenu.apps.menu.serializers import DishSerializer, DishCategorySerializer, DrinkSerializer
 
 
 class DishViewSet(viewsets.ReadOnlyModelViewSet):
@@ -14,4 +14,10 @@ class DishViewSet(viewsets.ReadOnlyModelViewSet):
 class DishCategoryViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = DishCategory.objects.all()
     serializer_class = DishCategorySerializer
+    permission_classes = [IsAuthenticated, ]
+
+
+class DrinkViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Drink.objects.all()
+    serializer_class = DrinkSerializer
     permission_classes = [IsAuthenticated, ]
