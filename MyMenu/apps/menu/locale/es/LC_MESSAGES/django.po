@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 18:36+0000\n"
+"POT-Creation-Date: 2019-10-26 18:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,7 @@ msgid "dish categories"
 msgstr "categorias"
 
 #: MyMenu/apps/menu/models.py:34 MyMenu/apps/menu/models.py:49
+#: MyMenu/apps/menu/models.py:65
 msgid "price"
 msgstr "precio"
 
@@ -76,34 +77,38 @@ msgstr "plato principal"
 msgid "garnish"
 msgstr "guarnicion"
 
-#: MyMenu/apps/menu/models.py:67
+#: MyMenu/apps/menu/models.py:64
+msgid "is day dish"
+msgstr "es plato del dia"
+
+#: MyMenu/apps/menu/models.py:68
 msgid "day dish"
 msgstr "plato del dia"
 
-#: MyMenu/apps/menu/models.py:68
+#: MyMenu/apps/menu/models.py:69
 msgid "day dishes"
 msgstr "platos del dia"
 
-#: MyMenu/apps/menu/models.py:72
+#: MyMenu/apps/menu/models.py:73
 msgid "client name"
 msgstr "nombre del cliente"
 
-#: MyMenu/apps/menu/models.py:73 MyMenu/apps/menu/models.py:76
+#: MyMenu/apps/menu/models.py:74 MyMenu/apps/menu/models.py:77
 msgid "suggestion"
 msgstr "sugerencia"
 
-#: MyMenu/apps/menu/models.py:77
+#: MyMenu/apps/menu/models.py:78
 msgid "suggestions"
 msgstr "sugerencias"
 
-#: MyMenu/apps/menu/models.py:81
+#: MyMenu/apps/menu/models.py:82
 msgid "method"
 msgstr "metodo"
 
-#: MyMenu/apps/menu/models.py:84
+#: MyMenu/apps/menu/models.py:85
 msgid "payment method"
 msgstr "metodo de pago"
 
-#: MyMenu/apps/menu/models.py:85
+#: MyMenu/apps/menu/models.py:86
 msgid "payment methods"
 msgstr "metodos de pago"
