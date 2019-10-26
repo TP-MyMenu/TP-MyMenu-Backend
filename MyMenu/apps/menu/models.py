@@ -19,11 +19,14 @@ class Dish(models.Model):
     description = models.CharField(_('description'), max_length=300)
     image = models.ImageField(_('image'), upload_to='dishes/', null=True, blank=True, storage=OverwriteStorage())
     price = models.FloatField(_('price'), default=0)
-    is_day_dish = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = _('dish')
         verbose_name_plural = _('dishes')
+
+    def __str__(self):
+        return self.name
+
 
 class Drink(models.Model):
     name = models.CharField(_('name'), max_length=30)
@@ -34,3 +37,19 @@ class Drink(models.Model):
     class Meta:
         verbose_name = _('drink')
         verbose_name_plural = _('drinks')
+
+    def __str__(self):
+        return self.name
+
+
+class DayDish(models.Model):
+    main_dish = models.ForeignKey(Dish, verbose_name=_('main dish'), on_delete=models.CASCADE,
+                                  related_name='day_dishes')
+    garnish = models.ForeignKey(Dish, verbose_name=_('garnish'), on_delete=models.CASCADE, blank=True, null=True)
+    drink = models.ForeignKey(Drink, verbose_name=_('drink'), on_delete=models.CASCADE, related_name='day_dishes')
+    is_day_dish = models.BooleanField(default=False)
+
+    class Meta:
+        verbose_name = _('day dish')
+        verbose_name_plural = _('day dishes')
+

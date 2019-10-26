@@ -4,28 +4,40 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from MyMenu.apps.menu.models import Dish
+from MyMenu.apps.menu.models import Dish, DayDish
 from MyMenu.apps.menu.service import DishService
 from MyMenu.apps.menu.models import Drink
+
 
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
     dish_service = DishService()
-    list_display = ('name', 'description', 'price', 'is_day_dish', 'custom_actions')
+    list_display = ('name', 'description', 'price')
+
+
+@admin.register(Drink)
+class DrinkAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description', 'price')
+
+
+@admin.register(DayDish)
+class DayDishAdmin(admin.ModelAdmin):
+    dish_service = DishService()
+    list_display = ('main_dish', 'garnish', 'drink', 'is_day_dish', 'custom_actions')
     readonly_fields = ('is_day_dish', )
 
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [url(
-            r'^(?P<dish_id>.+)/mark_as_day_dish/$',
+            r'^(?P<day_dish_id>.+)/mark_as_day_dish/$',
             self.admin_site.admin_view(self.mark_as_day_dish),
             name='mark-as-day-dish',
         )]
         return custom_urls + urls
 
-    def mark_as_day_dish(self, request, dish_id):
-        self.dish_service.mark_as_day_dish(dish_id)
-        return HttpResponseRedirect(reverse('admin:menu_dish_changelist'))
+    def mark_as_day_dish(self, request, day_dish_id):
+        self.dish_service.mark_as_day_dish(day_dish_id)
+        return HttpResponseRedirect(reverse('admin:menu_daydish_changelist'))
 
     def custom_actions(self, obj):
         return format_html(
@@ -34,7 +46,3 @@ class DishAdmin(admin.ModelAdmin):
             _("Mark as day dish"))
 
     custom_actions.short_description = _("dish actions")
-
-@admin.register(Drink)
-class DrinkAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'price')

@@ -1,9 +1,9 @@
-from MyMenu.apps.menu.repository import DishRepository
+from MyMenu.apps.menu.models import DayDish
 
 
 class DishService:
-    dish_repository = DishRepository()
-
-    def mark_as_day_dish(self, dish_id):
-        self.dish_repository.day_dish().update(is_day_dish=False)
-        self.dish_repository.get(dish_id).update(is_day_dish=True)
+    def mark_as_day_dish(self, day_dish_id):
+        current = DayDish.objects.filter(is_day_dish=True)
+        if current:
+            current.update(is_day_dish=False)
+        DayDish.objects.filter(id=day_dish_id).update(is_day_dish=True)
