@@ -80,6 +80,7 @@ class Suggestion(models.Model):
 
 class PaymentMethod(models.Model):
     method = models.CharField(_('method'), max_length=30)
+    promotion = models.CharField(_('promotion'), max_length=50, blank=True, null=True)
 
     class Meta:
         verbose_name = _('payment method')

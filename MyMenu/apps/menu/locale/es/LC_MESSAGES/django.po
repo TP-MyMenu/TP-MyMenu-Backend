@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 18:45+0000\n"
+"POT-Creation-Date: 2019-10-26 18:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,10 +105,14 @@ msgstr "sugerencias"
 msgid "method"
 msgstr "metodo"
 
-#: MyMenu/apps/menu/models.py:85
+#: MyMenu/apps/menu/models.py:83
+msgid "promotion"
+msgstr "promocion"
+
+#: MyMenu/apps/menu/models.py:86
 msgid "payment method"
 msgstr "metodo de pago"
 
-#: MyMenu/apps/menu/models.py:86
+#: MyMenu/apps/menu/models.py:87
 msgid "payment methods"
 msgstr "metodos de pago"
