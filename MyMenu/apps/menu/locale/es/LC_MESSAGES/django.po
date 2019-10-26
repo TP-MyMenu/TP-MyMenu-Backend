@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-26 18:48+0000\n"
+"POT-Creation-Date: 2019-10-26 18:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,17 +26,17 @@ msgid "dish actions"
 msgstr "acciones"
 
 #: MyMenu/apps/menu/models.py:18 MyMenu/apps/menu/models.py:31
-#: MyMenu/apps/menu/models.py:46
+#: MyMenu/apps/menu/models.py:48
 msgid "name"
 msgstr "nombre"
 
 #: MyMenu/apps/menu/models.py:19 MyMenu/apps/menu/models.py:32
-#: MyMenu/apps/menu/models.py:47
+#: MyMenu/apps/menu/models.py:49
 msgid "description"
 msgstr "descripcion"
 
 #: MyMenu/apps/menu/models.py:20 MyMenu/apps/menu/models.py:33
-#: MyMenu/apps/menu/models.py:48
+#: MyMenu/apps/menu/models.py:50
 msgid "image"
 msgstr "imagen"
 
@@ -48,71 +48,79 @@ msgstr "categoria"
 msgid "dish categories"
 msgstr "categorias"
 
-#: MyMenu/apps/menu/models.py:34 MyMenu/apps/menu/models.py:49
-#: MyMenu/apps/menu/models.py:65
+#: MyMenu/apps/menu/models.py:34 MyMenu/apps/menu/models.py:51
+#: MyMenu/apps/menu/models.py:67
 msgid "price"
 msgstr "precio"
 
-#: MyMenu/apps/menu/models.py:38
+#: MyMenu/apps/menu/models.py:36
+msgid "suitable for celiacs"
+msgstr "apto para celiacos"
+
+#: MyMenu/apps/menu/models.py:37
+msgid "suitable for vegetarians"
+msgstr "apto para vegetarianos"
+
+#: MyMenu/apps/menu/models.py:40
 msgid "dish"
 msgstr "plato"
 
-#: MyMenu/apps/menu/models.py:39
+#: MyMenu/apps/menu/models.py:41
 msgid "dishes"
 msgstr "platos"
 
-#: MyMenu/apps/menu/models.py:52 MyMenu/apps/menu/models.py:63
+#: MyMenu/apps/menu/models.py:54 MyMenu/apps/menu/models.py:65
 msgid "drink"
 msgstr "bebida"
 
-#: MyMenu/apps/menu/models.py:53
+#: MyMenu/apps/menu/models.py:55
 msgid "drinks"
 msgstr "bebidas"
 
-#: MyMenu/apps/menu/models.py:60
+#: MyMenu/apps/menu/models.py:62
 msgid "main dish"
 msgstr "plato principal"
 
-#: MyMenu/apps/menu/models.py:62
+#: MyMenu/apps/menu/models.py:64
 msgid "garnish"
 msgstr "guarnicion"
 
-#: MyMenu/apps/menu/models.py:64
+#: MyMenu/apps/menu/models.py:66
 msgid "is day dish"
 msgstr "es plato del dia"
 
-#: MyMenu/apps/menu/models.py:68
+#: MyMenu/apps/menu/models.py:70
 msgid "day dish"
 msgstr "plato del dia"
 
-#: MyMenu/apps/menu/models.py:69
+#: MyMenu/apps/menu/models.py:71
 msgid "day dishes"
 msgstr "platos del dia"
 
-#: MyMenu/apps/menu/models.py:73
+#: MyMenu/apps/menu/models.py:75
 msgid "client name"
 msgstr "nombre del cliente"
 
-#: MyMenu/apps/menu/models.py:74 MyMenu/apps/menu/models.py:77
+#: MyMenu/apps/menu/models.py:76 MyMenu/apps/menu/models.py:79
 msgid "suggestion"
 msgstr "sugerencia"
 
-#: MyMenu/apps/menu/models.py:78
+#: MyMenu/apps/menu/models.py:80
 msgid "suggestions"
 msgstr "sugerencias"
 
-#: MyMenu/apps/menu/models.py:82
+#: MyMenu/apps/menu/models.py:84
 msgid "method"
 msgstr "metodo"
 
-#: MyMenu/apps/menu/models.py:83
+#: MyMenu/apps/menu/models.py:85
 msgid "promotion"
 msgstr "promocion"
 
-#: MyMenu/apps/menu/models.py:86
+#: MyMenu/apps/menu/models.py:88
 msgid "payment method"
 msgstr "metodo de pago"
 
-#: MyMenu/apps/menu/models.py:87
+#: MyMenu/apps/menu/models.py:89
 msgid "payment methods"
 msgstr "metodos de pago"
