@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.translation import gettext_lazy as _
-from MyMenu.apps.menu.models import Dish, DishCategory, DayDish, Suggestion
+from MyMenu.apps.menu.models import Dish, DishCategory, DayDish, Suggestion, PaymentMethod
 from MyMenu.apps.menu.service import DishService
 from MyMenu.apps.menu.models import Drink
 
@@ -52,6 +52,11 @@ class DayDishAdmin(admin.ModelAdmin):
 @admin.register(DishCategory)
 class DishCategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
+
+
+@admin.register(PaymentMethod)
+class DishCategoryAdmin(admin.ModelAdmin):
+    list_display = ('method', )
 
 
 @admin.register(Suggestion)

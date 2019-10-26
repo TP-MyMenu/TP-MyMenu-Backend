@@ -75,3 +75,11 @@ class Suggestion(models.Model):
     class Meta:
         verbose_name = _('suggestion')
         verbose_name_plural = _('suggestions')
+
+
+class PaymentMethod(models.Model):
+    method = models.CharField(_('method'), max_length=30)
+
+    class Meta:
+        verbose_name = _('payment method')
+        verbose_name_plural = _('payment methods')
