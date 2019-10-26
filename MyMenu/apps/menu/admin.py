@@ -13,7 +13,7 @@ from MyMenu.apps.menu.models import Drink
 class DishAdmin(admin.ModelAdmin):
     dish_service = DishService()
     list_display = ('name', 'description', 'price')
-
+    list_filter = ('category', )
 
 @admin.register(Drink)
 class DrinkAdmin(admin.ModelAdmin):
