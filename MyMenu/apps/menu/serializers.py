@@ -3,15 +3,17 @@ from rest_framework import serializers
 from MyMenu.apps.menu.models import Dish, DishCategory, Drink, DayDish, Suggestion, PaymentMethod
 
 
-class DishSerializer(serializers.ModelSerializer):
+class DishCategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Dish
+        model = DishCategory
         fields = '__all__'
 
 
-class DishCategorySerializer(serializers.ModelSerializer):
+class DishSerializer(serializers.ModelSerializer):
+    category = DishCategorySerializer()
+
     class Meta:
-        model = DishCategory,
+        model = Dish
         fields = '__all__'
 
 
@@ -22,6 +24,10 @@ class DrinkSerializer(serializers.ModelSerializer):
 
 
 class DayDishSerializer(serializers.ModelSerializer):
+    main_dish = DishSerializer()
+    garnish = DishSerializer()
+    drink = DrinkSerializer()
+
     class Meta:
         model = DayDish
         fields = '__all__'
