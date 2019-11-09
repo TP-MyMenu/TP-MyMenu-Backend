@@ -52,6 +52,7 @@ class DayDish(models.Model):
                                   related_name='day_dishes')
     garnish = models.ForeignKey(Dish, verbose_name=_('garnish'), on_delete=models.CASCADE, blank=True, null=True)
     drink = models.ForeignKey(Drink, verbose_name=_('drink'), on_delete=models.CASCADE, related_name='day_dishes')
+    dessert = models.ForeignKey(Dish, verbose_name=_('dessert'), on_delete=models.CASCADE, related_name='dessert')
     is_day_dish = models.BooleanField(_('is day dish'), default=False)
     price = models.IntegerField(_('price'), default=0)
 
