@@ -27,6 +27,7 @@ class DayDishSerializer(serializers.ModelSerializer):
     main_dish = DishSerializer()
     garnish = DishSerializer()
     drink = DrinkSerializer()
+    dessert = DrinkSerializer()
 
     class Meta:
         model = DayDish
